@@ -1,14 +1,14 @@
 import Navbar from "./components/Navbar"
 import TextForm from "./components/TextForm"
-import About from "./components/About";
+// import About from "./components/About";
 import React,{useState} from 'react'; 
 import Alert from "./components/Alert";
-import{
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom"
+// import{
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link
+// } from "react-router-dom"
 
 import './App.css';
 let name="sunanda";
@@ -38,21 +38,21 @@ function App() {
   }
   return (
     <>
-  <Router>
+  {/* <Router> */}
    <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode}/>
    <Alert alert={alert} /> 
    <div className="container">
-    <Switch>
+    {/* <Switch>
       <Route exact path="/about">
       <About/>
-      </Route>
+      </Route> */}
 
-      <Route exact path="/">
-        <TextForm heading="enter text to analyse" mode={mode} showAlert={showAlert}/> 
-      </Route>
-    </Switch>
+      {/* <Route exact path="/"> */}
+        <TextForm heading="enter text to analyse" mode={mode} showAlert={showAlert}></TextForm>
+      {/* </Route>
+    </Switch> */}
     </div>
-  </Router>
+  {/* </Router> */}
    </>
   );
 } 
